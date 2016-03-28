@@ -5,3 +5,8 @@ erl_crash.dump
 *.ez
 .vagrant
 /c_src/newrelic
+
+
+# IntellJ
+.idea
+*.iml

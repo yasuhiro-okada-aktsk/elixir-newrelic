@@ -1,0 +1,23 @@
+machine:
+  python:
+    version: 2.7.10
+dependencies:
+  pre:
+    - script/ci/prepare.sh
+    - script/ci/prepare_tests.sh
+  cache_directories:
+    - ~/dependencies
+    - ~/.mix
+    - _build
+    - deps
+
+test:
+  override:
+    - script/ci/tests.sh
+
+deployment:
+  staging:
+    branch: master
+    commands:
+      #- cp ./artifact/phoenix.tar.gz $CIRCLE_ARTIFACTS
+
