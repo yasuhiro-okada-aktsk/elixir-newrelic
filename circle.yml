@@ -15,9 +15,9 @@ test:
   override:
     - script/ci/tests.sh
 
-deployment:
-  staging:
-    branch: master
-    commands:
+#deployment:
+#  staging:
+#    branch: master
+#    commands:
       #- cp ./artifact/phoenix.tar.gz $CIRCLE_ARTIFACTS
 
