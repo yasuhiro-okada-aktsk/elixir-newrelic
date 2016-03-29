@@ -14,10 +14,5 @@ dependencies:
 test:
   override:
     - script/ci/tests.sh
-
-#deployment:
-#  staging:
-#    branch: master
-#    commands:
-      #- cp ./artifact/phoenix.tar.gz $CIRCLE_ARTIFACTS
-
+  post:
+    - cp ./c_str/newrelic $CIRCLE_ARTIFACTS
