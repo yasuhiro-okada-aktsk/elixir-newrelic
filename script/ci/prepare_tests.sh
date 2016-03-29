@@ -11,4 +11,4 @@ cd $HOME/$CIRCLE_PROJECT_REPONAME
 mix clean
 mix deps.get
 mix compile
-mix compile.cure
+#mix compile.cure
