@@ -15,4 +15,4 @@ test:
   override:
     - script/ci/tests.sh
   post:
-    - cp ./c_str/newrelic $CIRCLE_ARTIFACTS
+    - cp ./c_src/newrelic $CIRCLE_ARTIFACTS
