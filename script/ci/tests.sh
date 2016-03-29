@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu
+set -eux
 
 export MIX_ENV=test
 export PATH=$HOME/dependencies/erlang/bin:$HOME/dependencies/elixir/bin:$PATH

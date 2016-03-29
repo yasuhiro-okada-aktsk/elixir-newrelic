@@ -2,7 +2,7 @@
 
 # https://gist.github.com/joakimk/48ed80f1a7adb5f5ea27
 
-set -eu
+set -eux
 
 export ERLANG_VERSION="18.1"
 export ELIXIR_VERSION="v1.2.2"
