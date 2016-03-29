@@ -2,7 +2,7 @@ dependencies:
   pre:
     - sudo apt-get update
     #- sudo apt-get install protobuf-compiler
-    - sudo apt-get install protobuf-c
+    - sudo apt-get install libprotobuf-dev
     - script/ci/prepare.sh
     - script/ci/prepare_tests.sh
   cache_directories:
