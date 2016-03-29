@@ -14,8 +14,8 @@ clean:
 	rm -f $(PWD)/c_src/newrelic
 	rm -f $(PWD)/c_src/operation_msg.pb.*
 operation_msg.pb.cc:
-  protoc $(PWD)/c_src/operation_msg.proto --cpp_out=$(PWD)/c_src/
-newrelic:operation_msg.pb.cc
+	protoc operation_msg.proto --cpp_out=$(PWD)/c_src/
+newrelic: operation_msg.pb.cc
 	gcc -o newrelic main.cc operation_msg.pb.cc $(ELIXIR_COMM_C) $(C_FLAGS) $(LDFLAGS)
 install:
 	install $(LIB_DIR)/*.so $(INSTALL_PATH)
