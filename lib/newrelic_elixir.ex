@@ -1,6 +1,6 @@
 defmodule ElixirNewrelic do
 
-  @newrelic_location Application.get_env(:elixir_newrelic, :newrelic_location, "/usr/local/bin/newrelic")
+  @newrelic_location Application.get_env(:elixir_newrelic, :newrelic_location, "./c_src/newrelic")
 
   @spec start_link() :: {:ok, pid} | {:error, term}
   def start_link() do
