@@ -12,6 +12,9 @@ ALL = clean newrelic
 all: $(ALL)
 clean:
 	rm -f $(PWD)/c_src/newrelic
+	rm -f $(PWD)/c_src/operation_msg.pb.*
+protobuf: operation_msg.pb.cc
+  protoc operation_msg.proto --cpp_out=$(PWD)/c_src/
 newrelic:
 	gcc -o newrelic main.cc operation_msg.pb.cc $(ELIXIR_COMM_C) $(C_FLAGS) $(LDFLAGS)
 install:
